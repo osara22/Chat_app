@@ -38,11 +38,13 @@ SNSを制作するに適したフレームワークなのでそれを製作し�
 	2.	コンテンツ(オープンチャットページ)
 	3.	個別チャット一覧ページ(検索機能もつける？)
 	4.	個別チャットページ(パスワードが付けられる)
-	5.	個別チャット入場前パスワード確認画面(パスワードがついている場合)
-	6.	個別チャット消去パスワード入力画面(コマンドで消せるようにしてもいいかも)
-	7.	問い合わせページ
+	5.	個別チャット入場前パスワード確認ページ(パスワードがついている場合)
+	6.	個別チャット消去パスワード入力ページ(コマンドで消せるようにしてもいいかも)
+	7.	個別チャット作成ページ
+	8.	問い合わせページ
 
 ## 設計書
 - [UIフロー 設計中](https://drive.google.com/file/d/1GRhumUz-r-MlgEBUxIpSpWn9SrSZuAxx/view?usp=sharing)
-- [ER図まだ]()
-- [テーブル定義書まだ]()
+- [ER図 設計中](https://drive.google.com/file/d/1CpLS-h0tddDMVFHBRL-BsMsqY95NrjDv/view?usp=sharing)
+- [テーブル定義書 設計中](https://docs.google.com/spreadsheets/d/15r1bQr1rk0HGHscAVaCcneYCPBLNRssIJRbD6BakSJY/edit?usp=sharing)
+- [アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/1Dm4A9WqMY2m-m8zq39UKyfJfodkVM6JAg4AzsYHLw7Y/edit?usp=sharing)
