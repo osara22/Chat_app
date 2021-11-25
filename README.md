@@ -44,7 +44,7 @@ SNSを制作するに適したフレームワークなのでそれを製作し�
 	8.	問い合わせページ
 
 ## 設計書
-- [UIフロー 設計中](https://drive.google.com/file/d/1GRhumUz-r-MlgEBUxIpSpWn9SrSZuAxx/view?usp=sharing)
+- [UIフロー仮確定](https://drive.google.com/file/d/1GRhumUz-r-MlgEBUxIpSpWn9SrSZuAxx/view?usp=sharing)
 - [ER図 設計中](https://drive.google.com/file/d/1CpLS-h0tddDMVFHBRL-BsMsqY95NrjDv/view?usp=sharing)
 - [テーブル定義書 設計中](https://docs.google.com/spreadsheets/d/15r1bQr1rk0HGHscAVaCcneYCPBLNRssIJRbD6BakSJY/edit?usp=sharing)
-- [アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/1Dm4A9WqMY2m-m8zq39UKyfJfodkVM6JAg4AzsYHLw7Y/edit?usp=sharing)
+- [アプリケーション詳細設計 設計中](https://docs.google.com/spreadsheets/d/1Dm4A9WqMY2m-m8zq39UKyfJfodkVM6JAg4AzsYHLw7Y/edit?usp=sharing)
