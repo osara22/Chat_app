@@ -3,4 +3,17 @@
 
 <%= link_to "オープンチャット", root_path %>
 
-<%= link_to "個別チャット一覧", rooms_path %>
+<%= link_to "ユーザー登録", new_user_path %>
+
+<%= link_to "ログイン", login_path %>
+
+<div>
+  <% if signed_in? %>
+    <p><%= current_user.name %></p>
+    <%= link_to "ログアウトする", logout_path, method: :delete %>
+    <p>ログインしています</p>
+  <% else %>
+    <p>ログインしていません</p>
+  <% end %>
+</div>
+
