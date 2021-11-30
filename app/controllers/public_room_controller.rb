@@ -1,0 +1,2 @@
+class PublicRoomController < ApplicationController
+end
