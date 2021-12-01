@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PrivateRoomControllerTest < ActionDispatch::IntegrationTest
+class PasswordLockControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

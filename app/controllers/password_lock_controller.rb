@@ -1,0 +1,2 @@
+class PasswordLockController < ApplicationController
+end
