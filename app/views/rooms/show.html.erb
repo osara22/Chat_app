@@ -1,2 +1,16 @@
 <h1>チャットルームです</h1>
 <h2>部屋名: <%= @room.name %></h2>
+<% if signed_in? %>
+  <%= form_with model: @message, url: room_messages_path(@room) do |f| %>
+    <%= f.text_field :body %>
+    <%= f.submit "送信する" %>
+  <% end %>
+<% end %>
+<h3>メッセージ↓</h3>
+<% if @messages.present? %>
+  <% @messages.each do |message| %>
+    <div>
+      <p><%= message.user.name %>: <%= message.body %></p>
+    </div>
+  <% end %>
+<% end %>

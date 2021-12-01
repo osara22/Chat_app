@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :openchats, only: [:index]
     
     resources :rooms, only: [:new, :index, :show, :create, :destroy] do
+      resources :messages, only: [:create]
       resources :password_lock, only: [:index, :create]
     end
     
