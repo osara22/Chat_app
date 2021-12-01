@@ -1,2 +1,0 @@
-class PrivateRoomController < ApplicationController
-end

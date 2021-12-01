@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-    root to: "homes#top"
-    
-    resources :openchats, only: [:index]
+    root to: 'homes#top'
     
     resources :users, only: [:new, :create]
     
@@ -9,7 +7,10 @@ Rails.application.routes.draw do
     post 'login', to: 'sessions#create'
     delete 'logout', to: 'sessions#destroy'
     
-    resources :public_rooms, only: [:index, :show, :new, :create, :destroy] do
-      resources :messages, only: [:create]
+    resources :openchats, only: [:index]
+    
+    resources :rooms, only: [:new, :index, :show, :create, :destroy] do
+      resources :password_lock, only: [:index, :create]
     end
+    
 end
