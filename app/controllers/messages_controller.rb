@@ -1,11 +1,7 @@
 class MessagesController < ApplicationController
   def create
-    message = Message.new(message_params.merge(user_id: current_user.id, room_id: params[:room_id]))
-    if message.save
-      redirect_to room_path(message.room_id)
-    else
-      redirect_to root_path
-    end
+    @message = Message.create(message_params.merge(user_id: current_user.id, room_id: params[:room_id]))
+    ActionCable.server.broadcast "room_channel_#{params[:room_id]}", message: @message
   end
   
   private

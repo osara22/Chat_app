@@ -1,16 +1,17 @@
 <h1>チャットルームです</h1>
 <h2>部屋名: <%= @room.name %></h2>
-<% if signed_in? %>
-  <%= form_with model: @message, url: room_messages_path(@room) do |f| %>
-    <%= f.text_field :body %>
-    <%= f.submit "送信する" %>
+<div id="message-post-area">
+  <% if signed_in? %>
+    <%= render 'messages/post_area', message: @message, room: @room %>
   <% end %>
-<% end %>
+</div>
+
 <h3>メッセージ↓</h3>
 <% if @messages.present? %>
   <% @messages.each do |message| %>
     <div>
-      <p><%= message.user.name %>: <%= message.body %></p>
+      <p><%= message.user.name %>:</p>
+      <%= simple_format(h message.body) %>
     </div>
   <% end %>
 <% end %>
