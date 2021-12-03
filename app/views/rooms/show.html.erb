@@ -1,0 +1,23 @@
+<h1>チャットルームです</h1>
+<h2>部屋名: <%= @room.name %></h2>
+<div id="message-post-area">
+  <% if signed_in? %>
+    <%= render 'messages/post_area', message: @message, room: @room %>
+  <% end %>
+</div>
+
+<form>
+  <input type="text" chat-data-behavior="room_speak">
+  <input type="hidden" id="room_id" value="<%= @room.id %>">
+  <input type="hidden" id="user_id" value="<%= current_user.id %>">
+</form>
+
+<h3>テスト↓</h3>
+<h3>メッセージ↓</h3>
+<div id="message-data">
+  <% if @messages.present? %>
+    <% @messages.each do |message| %>
+      <%= render 'messages/message', message: message %>
+    <% end %>
+  <% end %>
+</div>

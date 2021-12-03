@@ -1,0 +1,21 @@
+<h1>TOPページです</h1>
+<div>
+  <%= link_to "トップページ", root_path %>
+  <%= link_to "ユーザー登録", new_user_path %>
+  <%= link_to "ログイン", login_path %>
+</div>
+<div>
+  <%= link_to "ルーム一覧", rooms_path %>
+  <%= link_to "ルーム作成", new_room_path %>
+</div>
+
+<div>
+  <% if signed_in? %>
+    <p><%= current_user.name %></p>
+    <%= link_to "ログアウトする", logout_path, method: :delete %>
+    <p>ログインしています</p>
+  <% else %>
+    <p>ログインしていません</p>
+  <% end %>
+</div>
+

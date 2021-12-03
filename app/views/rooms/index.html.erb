@@ -1,0 +1,27 @@
+<h1>ルーム一覧</h1>
+
+<table>
+  <thead>
+    <th>ID</th>
+    <th>部屋名</th>
+    <th>メッセージ数</th>
+    <th>パスワード</th>
+  </thead>
+  <tbody>
+    <% @rooms.each do |room| %>
+    <tr>
+      <td><%= room.id %></td>
+      <td><%= link_to room.name, room_path(room) %></td>
+      <td><%= room.messages.length %></td>
+      <td>
+        <% if room.join_password.present? %>
+          有
+        <% else %>
+          無
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
