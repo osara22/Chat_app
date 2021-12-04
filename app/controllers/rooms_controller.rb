@@ -17,6 +17,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
+      session[:private_room] = @room.id if @room.join_password.present?
       redirect_to room_path(@room)
     else
       render :new
