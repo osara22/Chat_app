@@ -6,16 +6,16 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
   end
   
+  def signed_in?
+    current_user.present?
+  end
+
   def sign_out
     session[:user_id] = nil
   end
   
-  def signed_in?
-    current_user.present?
-  end
-  
-  def not_sign_in!
-    redirect_to login_path unless signed_in?
+  def already_sign_in
+    redirect_to root_path if signed_in?
   end
   
 end
