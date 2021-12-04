@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
   
   def create
     user = User.find_by(name: session_params[:name])
-    byebug
     if user.present?
       if user.authenticate(session_params[:password])
         session[:user_id] = user.id
@@ -20,6 +19,7 @@ class SessionsController < ApplicationController
   
   def destroy
     sign_out
+    redirect_to root_path
   end
   
   private

@@ -24,12 +24,23 @@ class RoomsController < ApplicationController
   end
   
   def destroy
-    
+    room = Room.find(params[:id])
+    if room.delete_password == delete_params[:password]
+      room.destroy
+      redirect_to root_path
+    else
+      @room = Room.find(params[:id])
+      render :show
+    end
   end
   
   private
   def room_params
     params.require(:room).permit(:name, :join_password, :delete_password)
+  end
+  
+  def delete_params
+    params.require(:room).permit(:password)
   end
   
   def password_check
