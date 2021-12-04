@@ -5,10 +5,10 @@
   <%= f.text_field :name, placeholder: "name" %>
   
   <%= f.label :password, "パスワード" %>
-  <%= f.text_field :password, placeholder: "password" %>
+  <%= f.password_field :password, placeholder: "password" %>
   
-  <%= f.label :passoword_confirmation, "パスワード(再入力)" %>
-  <%= f.text_field :passoword_confirmation, placeholder: "password" %>
+  <%= f.label :password_confirmation, "パスワード(再入力)" %>
+  <%= f.password_field :password_confirmation, placeholder: "password" %>
   
   <%= f.submit "新規登録"  %>
 <% end %>
