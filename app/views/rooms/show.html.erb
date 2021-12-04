@@ -8,18 +8,19 @@
     
     <%= f.submit "消去"  %>
   <% end %>
-  <%= link_to "消去", room_path(@room), method: :delete %>
-</div>
-<div id="message-post-area">
-  <% if signed_in? %>
-    <%= render 'messages/post_area', message: @message, room: @room %>
-  <% end %>
 </div>
 
 <form>
-  <input type="text" chat-data-behavior="room_speak">
+  <h3>投稿フォーム</h3>
   <input type="hidden" id="room_id" value="<%= @room.id %>">
-  <input type="hidden" id="user_id" value="<%= current_user.id %>">
+  <% if signed_in? %>
+    <input type="text" chat-data-behavior="room_speak">
+    <input type="hidden" id="user_id" value="<%= current_user.id %>">
+  <% else %>
+    <p>ログインをしてください</p>
+    <%= link_to "ユーザー登録", new_user_path %>
+    <%= link_to "ログイン", login_path %>
+  <% end %>
 </form>
 
 <h3>テスト↓</h3>
