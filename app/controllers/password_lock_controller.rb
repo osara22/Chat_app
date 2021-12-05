@@ -9,6 +9,7 @@ class PasswordLockController < ApplicationController
       session[:private_room] = room.id
       redirect_to room_path(room)
     else
+      flash.now.alert = "パスワードが違います"
       render :index
     end
   end

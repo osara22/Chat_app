@@ -1,0 +1,159 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+  @import url('https://fonts.googleapis.com/css2?family=Murecho&display=swap');
+ 
+ 
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Murecho', sans-serif;
+  }
+  
+  main {
+    padding: 10px;
+  }
+  
+  header {
+    background-color: darkorange;
+    box-shadow: 1px 1px 2px;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  
+  input[type="text"], input[type="password"] {
+    padding: 3px;
+    border: solid 2.5px lightgray;
+    border-radius: 10px;
+    width: 300px;
+  }
+  
+  input[type="submit"] {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+  
+  
+  textarea {
+    resize: none;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    
+    th, td {
+      text-align: center;
+      width: 25%;
+      padding: 15px 0;
+    }
+  }
+  
+  .room-list-table tr {
+    border-bottom: solid 2px lightgray;
+  }
+  
+  .room-delete-form {
+    float: right;
+  }
+  
+  #room_password {
+    width: 150px;
+  }
+  
+  .message {
+    padding: 0 10px;
+    border: solid 1px lightgray;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background-color: ghostwhite;
+    box-shadow: 1px 1px 2px;
+  }
+  
+  #message-data {
+    margin-top: 10px;
+  }
+  
+  .message-body {
+    padding: 10px;
+  }
+  
+  .message-form {
+    height: 150px;
+    width: 90%;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  .message-form-space {
+    height: 150px
+  }
+  
+  .room-links {
+    margin: 10px 0;
+  }
+  
+  .login-status p {
+    margin-bottom: 10px;
+  }
+  
+  .not-login {
+    border: solid 1px lightgray;
+    border-radius: 15px;
+    background-color: white;
+    padding: 20px;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  
+  .alert-messsage {
+    text-align: center;
+    color: white;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .bgreen {
+    background-color: lightgreen;
+  }
+  
+  .brblue {
+    background-color: royalblue;
+  }
+  
+  .bred {
+    background-color: orangered;
+  }
+  
+  .bdblue {
+    background-color: deepskyblue;
+  }

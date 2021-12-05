@@ -10,6 +10,11 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path
     else
+      if @user.errors.full_messages == ["Nameはすでに存在します"]
+        flash.now.alert = "その名前は既に使われています"
+      else
+        flash.now.alert = "入力に誤りがあります"
+      end
       render :new
     end
   end

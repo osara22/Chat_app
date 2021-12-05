@@ -1,21 +1,18 @@
-<h1>TOPページです</h1>
-<div>
-  <%= link_to "トップページ", root_path %>
-  <%= link_to "ユーザー登録", new_user_path %>
-  <%= link_to "ログイン", login_path %>
-</div>
-<div>
-  <%= link_to "ルーム一覧", rooms_path %>
-  <%= link_to "ルーム作成", new_room_path %>
+<h3>メールアドレス無しで登録できる</br>チャットアプリです</h3>
+<div class ="room-links">
+  <%= link_to "ルーム一覧", rooms_path, class: "button bdblue" %>
+  <%= link_to "ルーム作成", new_room_path, class: "button bdblue" %>
 </div>
 
-<div>
   <% if signed_in? %>
-    <p><%= current_user.name %></p>
-    <%= link_to "ログアウトする", logout_path, method: :delete %>
-    <p>ログインしています</p>
+    <div class="login-status">
+      <p><%= current_user.name %>さん ようこそ</p>
+      <%= link_to "ログアウトする", logout_path, class: "button bred", method: :delete %>
+    </div>
   <% else %>
-    <p>ログインしていません</p>
+    <div class="signin-signup-links">
+      <%= link_to "ユーザー登録", new_user_path, class: "button brblue" %>
+      <%= link_to "ログイン", login_path, class: "button bgreen" %>
+    </div>
   <% end %>
-</div>
 
