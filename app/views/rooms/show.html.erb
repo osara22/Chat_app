@@ -9,21 +9,6 @@
     <%= f.submit "消去"  %>
   <% end %>
 </div>
-
-<form>
-  <h3>投稿フォーム</h3>
-  <input type="hidden" id="room_id" value="<%= @room.id %>">
-  <% if signed_in? %>
-    <input type="text" chat-data-behavior="room_speak">
-    <input type="hidden" id="user_id" value="<%= current_user.id %>">
-  <% else %>
-    <p>ログインをしてください</p>
-    <%= link_to "ユーザー登録", new_user_path %>
-    <%= link_to "ログイン", login_path %>
-  <% end %>
-</form>
-
-<h3>テスト↓</h3>
 <h3>メッセージ↓</h3>
 <div id="message-data">
   <% if @messages.present? %>
@@ -31,4 +16,21 @@
       <%= render 'messages/message', message: message %>
     <% end %>
   <% end %>
+</div>
+
+<div class="message-form-space"></div>
+
+<div class="message-form">
+  <form>
+    <h3>投稿フォーム</h3>
+    <input type="hidden" id="room_id" value="<%= @room.id %>">
+    <% if signed_in? %>
+      <textarea chat-data-behavior="room_speak" class="text-area"></textarea>
+      <input type="hidden" id="user_id" value="<%= current_user.id %>">
+    <% else %>
+      <p>ログインをしてください</p>
+      <%= link_to "ユーザー登録", new_user_path %>
+      <%= link_to "ログイン", login_path %>
+    <% end %>
+  </form>
 </div>
