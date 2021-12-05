@@ -11,6 +11,12 @@
 
   <body>
     <%= render 'layouts/header' %>
+    <!-- エラーメッセージ -->
+    <% if flash[:alert].present? %>
+      <div class="alert-messsage bred">
+        <p><%= flash[:alert] %></p>
+      </div>
+    <% end %>
     <main>
       <%= yield %>
     </main>

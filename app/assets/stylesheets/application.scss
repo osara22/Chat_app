@@ -129,10 +129,15 @@
     }
   }
   
+  .alert-messsage {
+    text-align: center;
+    color: white;
+  }
+  
   .button {
-    color: #fff;
-    padding: 10px 30px;
     display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
     border-radius: 5px;
     text-decoration: none;
   }

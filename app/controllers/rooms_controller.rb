@@ -20,6 +20,7 @@ class RoomsController < ApplicationController
       session[:private_room] = @room.id if @room.join_password.present?
       redirect_to room_path(@room)
     else
+      flash.now.alert = "入力に誤りがあります"
       render :new
     end
   end
@@ -31,6 +32,7 @@ class RoomsController < ApplicationController
       redirect_to root_path
     else
       @room = Room.find(params[:id])
+      flash.now.alert = "パスワードが違います"
       render :show
     end
   end
