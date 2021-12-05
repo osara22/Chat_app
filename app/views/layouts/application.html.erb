@@ -4,20 +4,15 @@
     <title>ChatApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-    <header>
-      
-    </header>
+    <%= render 'layouts/header' %>
     <main>
       <%= yield %>
     </main>
-    <footer>
-      
-    </footer>
   </body>
 </html>

@@ -1,4 +1,6 @@
 <div class="message">
-  <p><%= message.user.name %></p>
-  <%= simple_format(h message.body) %>
+  <p>Name: <strong><%= message.user.name %></strong> <%= message.created_at.strftime('%Y/%m/%d %H:%M:%S') %> </p>
+  <div class="message-body">
+    <%= simple_format(h message.body) %>
+  </div>
 </div>
