@@ -12,4 +12,5 @@ Rails.application.routes.draw do
     resources :password_lock, only: [:index, :create]
   end
   
+  get '*anything', to: 'errors#render_404'
 end

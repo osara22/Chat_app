@@ -45,10 +45,14 @@ class RoomsController < ApplicationController
   end
   
   def password_check
-    if Room.find(params[:id]).join_password.present?
-      unless Room.find(params[:id]).id == session[:private_room]
-        redirect_to room_password_lock_index_path(params[:id])
+    if Room.exists?(id: params[:id]) 
+      if Room.find(params[:id]).join_password.present?
+        unless Room.find(params[:id]).id == session[:private_room]
+          redirect_to room_password_lock_index_path(params[:id])
+        end
       end
+    else
+      redirect_to root_path
     end
   end
 end
