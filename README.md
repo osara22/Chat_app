@@ -7,13 +7,13 @@
 - IDE：Cloud9
 
 ## 題材
-チャットアプリ<br>
+チャットアプリ
 
 ## 開発期間
 2週間
 
 ## 概要
-ライブラリを極力使わないでの制作<br>
+ライブラリを極力使わないでの制作
 
 ## 設計書
 - [UIフロー](https://drive.google.com/file/d/1GRhumUz-r-MlgEBUxIpSpWn9SrSZuAxx/view?usp=sharing)
